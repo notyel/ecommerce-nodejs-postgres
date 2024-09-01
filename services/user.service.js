@@ -5,6 +5,15 @@ class UserService {
   constructor() {}
 
   async create(data) {
+    const user = await models.User.findOne({
+      where: {
+        email: data.email,
+      },
+    });
+    if (user) {
+      throw boom.conflict('email already exists');
+    }
+
     const newUser = await models.User.create(data);
     return newUser;
   }
