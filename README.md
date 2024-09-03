@@ -17,6 +17,7 @@ Este repositorio contiene el código fuente del backend de una aplicación de co
 * Node.js
 * Express.js
 * PostgreSQL
+* Sequelize (ORM)
 
 **Cómo ejecutar:**
 
